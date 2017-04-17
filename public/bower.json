@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "system.js": "^0.18.17",
+    "browser": "https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js",	
+    "handlebars": "^4.0.5",
+    "sammy": "^0.7.6",
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
