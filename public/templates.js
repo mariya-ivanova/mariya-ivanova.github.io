@@ -3,7 +3,7 @@ import Handlebars from 'handlebars'
 
 export default {
     load: function(name) {
-        var url = 'templates/' + name + '.handlebars';		
+        var url = 'public/templates/' + name + '.handlebars';		
 
         return new Promise(function(resolve, reject) {
             $.ajax({
