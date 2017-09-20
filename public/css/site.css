@@ -205,6 +205,17 @@ span.more-icon {
 	position: relative;
 }
 
+.more {
+	padding: 5px 15px;
+	border: 1px solid #415b0b;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+a.more {
+	text-decoration: none;
+}
+
 .more-icon {
 	margin: auto;
 	height: 20px;

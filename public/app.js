@@ -6,6 +6,7 @@ import aboutmeController from 'controllers/aboutmeController.js'
 import homeController from 'controllers/homeController.js'
 import portfolioController from 'controllers/portfolioController.js'
 import websitesController from 'controllers/websitesController.js'
+import paintingsController from 'controllers/paintingsController.js'
 
 var containerId = '#main';
 var sammyApp = Sammy(containerId, function() {
@@ -16,6 +17,7 @@ var sammyApp = Sammy(containerId, function() {
 	this.get('#/home', homeController.all);		
 	this.get('#/portfolio', portfolioController.all);	
 	this.get('#/websites', websitesController.all);	
+	this.get('#/paintings', paintingsController.all);		
     this.get('#/aboutme', aboutmeController.all);	
 
     templates.load('main-navbar')
