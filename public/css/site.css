@@ -86,10 +86,10 @@ footer a:active,
 .navbar-default .navbar-nav > li > a.active, 
 .navbar-default .navbar-nav > li > a:focus, 
 .navbar-default .navbar-nav > li > a:active  {
-	color: #88bb22;
+	color: #77aa22;	
 }
 
-.item active {
+.item.active {
 	position: relative;
 }
 
@@ -196,6 +196,7 @@ span.more-icon {
 	width: 80%;
 }
 
+.intro a .item-image:hover,
 .intro  a + .item-image:hover {
     opacity: 0.6;
     filter: alpha(opacity=60); /* For IE8 and earlier */	
@@ -238,12 +239,22 @@ a.more {
 #portfolio img {
 	float: left;
 	margin: 10px 20px;
+	max-width: 100%;
 }
 
 footer,
 footer .row {
 	color: #ffffff;
 	background-color: #111111;
+}
+
+footer h1, 
+footer h2, 
+footer h3, 
+footer h4, 
+footer h5, 
+footer h6 {
+	color: #415b0b;
 }
 
 footer p.copy {
@@ -258,6 +269,10 @@ footer p.copy {
 	
 	.intro img {
 		width: 100%;
+	}	
+
+	#portfolio img {
+		/*width: 100%;*/
 	}	
 }
 
