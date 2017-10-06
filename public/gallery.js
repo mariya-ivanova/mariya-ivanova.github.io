@@ -12,9 +12,22 @@ import 'jquery'
 			var $previousImage = $selected.find('#previous-image');
 			var $nextImage = $selected.find('#next-image');	
 			
+			var imageContainerWidth = 0;
+			var screenWidth = $(document).width();
+
+			if(screenWidth < 600){
+				imageContainerWidth = 100;	
+			}
+			else {
+				imageContainerWidth = 90/columnsPerRow;
+			}			
+			imageContainerWidth = imageContainerWidth + "%";
+
 			$imageContainers.each(function(index, element){
+				$(element).width(imageContainerWidth);	
+							
 				if(index % columnsPerRow == 0) {
-					$(element).addClass('clearfix');	
+					$(element).addClass('clearfix');						
 				}
 			});
 			
