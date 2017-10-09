@@ -8,6 +8,7 @@ import portfolioController from 'controllers/portfolioController.js'
 import websitesController from 'controllers/websitesController.js'
 import paintingsController from 'controllers/paintingsController.js'
 import bannersController from 'controllers/bannersController.js'
+import subtitlesController from 'controllers/subtitlesController.js'
 
 var containerId = '#main';
 var sammyApp = Sammy(containerId, function() {
@@ -21,6 +22,7 @@ var sammyApp = Sammy(containerId, function() {
 	this.get('#/websites', websitesController.all);	
 	this.get('#/paintings', paintingsController.all);		
     this.get('#/banners', bannersController.all);	
+    this.get('#/subtitles', subtitlesController.all);	    
 
     templates.load('main-navbar')
 		.then(function(template) {				
