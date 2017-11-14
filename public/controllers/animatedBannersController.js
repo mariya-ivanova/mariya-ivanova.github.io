@@ -1,5 +1,5 @@
 // animatedBannersController
-// import 'jquery'
+import 'jquery'
 import templates from 'templates.js'
 import myBanner from 'myBanner.js'
 
