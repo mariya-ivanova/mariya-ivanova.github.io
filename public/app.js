@@ -1,6 +1,6 @@
 //import 'sammy'
 import Sammy from 'sammy'
-import 'jquery' 
+import 'jquery'
 import templates from 'templates.js' 
 import homeController from 'controllers/homeController.js'
 import aboutmeController from 'controllers/aboutmeController.js'
@@ -8,6 +8,7 @@ import portfolioController from 'controllers/portfolioController.js'
 import websitesController from 'controllers/websitesController.js'
 import paintingsController from 'controllers/paintingsController.js'
 import bannersController from 'controllers/bannersController.js'
+import animatedBannersController from 'controllers/animatedBannersController.js'
 import subtitlesController from 'controllers/subtitlesController.js'
 
 var containerId = '#main';
@@ -22,6 +23,7 @@ var sammyApp = Sammy(containerId, function() {
 	this.get('#/websites', websitesController.all);	
 	this.get('#/paintings', paintingsController.all);		
     this.get('#/banners', bannersController.all);	
+    this.get('#/animatedbanners', animatedBannersController.all);	        
     this.get('#/subtitles', subtitlesController.all);	    
 
     templates.load('main-navbar')
