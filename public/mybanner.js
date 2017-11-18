@@ -1,5 +1,10 @@
+import 'jquery'
+
 export default {
     all: function() {
+
+        var $startButton = $('#main #300-250');  
+        $startButton.hide();     
 
         ////////////// input data /////////////////
         var altClr = "#fb9011",
@@ -43,10 +48,10 @@ export default {
 
         banner.appendChild(text1);
         banner.appendChild(secondOffer);
-
+        
         var tween = new TimelineMax({
             // paused: true,
-            onComplete: this.checkLoop
+            onComplete: checkLoop
         });
 
         var defaultTime = 2;
@@ -117,12 +122,15 @@ export default {
             .to(hr, 0.15, {autoAlpha: 0, ease: Sine.easeOut})
             .to(offerTxt, 0.45, {y: -40, ease: SteppedEase.config(6)}); 
 
-        document.getElementById('banner').style.opacity = 1;        
+        document.getElementById('banner').style.opacity = 1;       
 
         function checkLoop() { 
             if (loop > 1) {
-                loop -= 1;
-                this.restart();
+                loop -= 1;  
+                this.restart();              
+            }
+            else {
+                $startButton.show();                 
             }
         }                
 
@@ -130,7 +138,11 @@ export default {
             var repOpen = '<span class="altColor", style="color:' + altClr + '">',
                 repClose = '</span>';
             return text.replace(/{/g, repOpen).replace(/}/g, repClose);
-        }        
+        }   
+
+        $startButton.on('click', function() {
+            tween.restart();
+        });              
 
     }
 }
