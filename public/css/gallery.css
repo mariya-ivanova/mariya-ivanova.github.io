@@ -5,7 +5,7 @@
 .gallery .image-container {
     float: left;
     width: 250px;
-    min-height: 200px;
+    min-height: 150px;
     max-width: 100%;
     margin: 5px;
 }
