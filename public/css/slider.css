@@ -1,0 +1,94 @@
+#previewer {
+  zoom: 1;
+  max-width: 100%;
+}
+
+#large:after,
+#previewer:after {
+  display: block;
+  clear: both;
+  content: '';
+  height: 0;
+}
+
+#previewer #large {
+  float: left;
+  width: 510px;
+  height: 320px;
+  padding: 0 15px 15px 15px;
+}
+
+#previewer #large h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+#previewer #large img {
+  border-radius: 5px;
+  max-width: 97%;
+}
+
+#list {
+  clear: both; 
+  float: left;
+}
+
+#list .title {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 5px 0;
+}
+
+#list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  float: left;
+}
+
+#list ul li {
+  display: inline-block;
+  border: 1px solid #777;
+  text-align: center;
+  margin: 5px 10px;
+}
+
+#list ul li:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  cursor: hand;
+}
+
+#list ul li.current {
+  background: #ccc;
+  border-radius: 5px;
+}
+
+#list ul li.current:hover {
+  text-decoration: none;
+  cursor: arrow;
+}
+
+#list ul li img {
+  display: inline-block;
+  border-radius: 5px;
+  width: 110px;
+  height: 60px;
+}
+
+#btn-prev,
+#btn-next {
+  margin: 30px auto;
+  padding: 10px 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 1.1em;
+  background: #ccc;
+  float: left;
+}
+
+#btn-prev:hover,
+#btn-next:hover {
+  background: #e6e6e6;
+}
