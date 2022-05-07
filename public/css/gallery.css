@@ -17,7 +17,7 @@
 .gallery .selected {
     width: 100%;
     position: fixed;
-    top: 10%;
+    top: 0;
     left: 0;
     z-index: 200;
 }
@@ -79,5 +79,9 @@
 @media (max-width:770px) {  
     .gallery .image-container {
         width: 100%;
-    }  
+    }
+    
+    .gallery .selected {
+        top: 10%;
+    }
 }
