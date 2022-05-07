@@ -14,7 +14,7 @@ export default {
         templates.load('paintings')
             .then(function(data) {								
 				$('#main').html(data);			
-				$('#gallery').gallery(3);					
+				$('#gallery').gallery(4);					
         });			
     }
 }
