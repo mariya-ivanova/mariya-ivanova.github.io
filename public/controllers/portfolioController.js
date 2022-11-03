@@ -10,7 +10,9 @@ export default {
             $('#language-bar').html(data('portfolio'));   
         });     	
 
-        var lang = sammy.params['lang'] || ':bg';
+        var lang = localStorage.getItem('lang') || ':bg';  
+        lang = sammy.params['lang'] || lang;
+
         if(lang == ':en') {
             templates.load('portfolioen')
             .then(function(data) {                          
@@ -22,7 +24,8 @@ export default {
             .then(function(data) {                          
                 $('#main').html(data);                                              
             }); 
-        }   
+        }
 
+        localStorage.setItem('lang', lang);
     }
 }

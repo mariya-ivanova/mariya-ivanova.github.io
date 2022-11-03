@@ -12,6 +12,9 @@ import animatedBannersController from 'controllers/animatedBannersController.js'
 import subtitlesController from 'controllers/subtitlesController.js'
 
 var containerId = '#main';
+const SITE_LANG = 'lang';
+localStorage.setItem(SITE_LANG, ':bg');
+
 var sammyApp = Sammy(containerId, function() {
     this.get('#/', function() {
         this.redirect('#/home');
