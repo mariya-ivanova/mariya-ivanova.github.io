@@ -40,6 +40,24 @@ var sammyApp = Sammy(containerId, function() {
     templates.load('main-navbar')
 		.then(function(template) {				
 			$('#wrapper header').html(template);	
+
+			const loadText = $('.loading-text');
+			const bg = $('header .bg');
+
+			let load = 0;
+			let int = setInterval(blurring, 80);
+
+			function blurring() {
+			  load++
+
+			  if (load > 99) {
+			    clearInterval(int)
+			  }
+
+			  loadText.text(`${load}%`);
+			  loadText.css("opacity", (100 - load) / 100);
+			  bg.css("filter", `blur(${(100 - load) * 30 / 100}px)`);
+			}			
         });			
 	
     templates.load('footer')

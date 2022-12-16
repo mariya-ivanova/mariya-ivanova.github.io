@@ -8,9 +8,25 @@ body {
 	background-color: #f4f4f4;	
 }
 
-header,
-header .row {
-	background-color: #415b0b;	
+header .row:first-child {
+	position: relative;
+	min-height: 250px;
+}
+
+header .row:first-child .bg {
+	background: url('../images/dsc_0971r.jpg') no-repeat center center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100%;
+	z-index: -1;
+	filter: blur(0px);	
+}
+
+.loading-text {
+  font-size: 50px;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -56,7 +72,7 @@ a:hover, a.active, a:focus, a:active  {
 }
 
 .navbar-default {
-	background-color: #111111;
+	background-color: #415b0b;
 	text-transform: uppercase;
 	border-radius: 0px;
 	border-color: #111111;
